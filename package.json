@@ -1,0 +1,16 @@
+{
+  "name": "code-challenges",
+  "version": "1.0.0",
+  "description": "CoTypical code challenges from interviews, solved my way.",
+  "main": "./src/main.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./src/main",
+    "test": "test"
+  },
+  "author": "Daniel Arriero",
+  "license": "ISC"
+}
