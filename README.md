@@ -4,7 +4,8 @@ Typical code challenges we find in all technical interview, ranging from very
 easy to that what-the-heck moment we all hate when it happens in the middle of
 an interview.
 
-This is a NodeJs project based on the [Express framework](https://expressjs.com/).
+This NodeJs project is based on the [Express framework](https://expressjs.com/).
+[Jest] (https://jestjs.io/) takes care of the testing side of things.
 
 ## Installation
 
