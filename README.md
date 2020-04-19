@@ -5,7 +5,7 @@ easy to that what-the-heck moment we all hate when it happens in the middle of
 an interview.
 
 This NodeJs project is based on the [Express framework](https://expressjs.com/).
-[Jest] (https://jestjs.io/) takes care of the testing side of things.
+[Jest](https://jestjs.io/) takes care of the testing side of things.
 
 ## Installation
 
