@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
-const timeRouter = require('./time/time.routes');
 
+const mathRouter = require('./math/math.router');
+const timeRouter = require('./time/time.router');
+
+app.use('/math', mathRouter);
 app.use('/time', timeRouter);
-app.get('/', (req, res) => res.send('Hello World!'));
 
 module.exports = app;

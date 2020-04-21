@@ -1,3 +1,3 @@
 module.exports = {
-    minutesToSeconds: (req, res) => res.json({ seconds: req.params.minutes * 60 })
+  minutesToSeconds: (req, res) => res.json({ seconds: req.params.minutes * 60 })
 };

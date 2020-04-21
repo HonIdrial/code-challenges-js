@@ -2,12 +2,27 @@ const app = require('../server');
 const supertest = require('supertest');
 const req = supertest(app);
 
-describe('Minutes to Seconds', () => {
-  it('should return the conversion from the minutes to seconds', async done => {
-    const res = await req.get('/time/m2s/2');
+describe('Time Controller', () => {
+  describe('Minutes to Seconds', () => {
+    test('2 minutes', async done => {
+      const res = await req.get('/time/m2s/2');
 
-    expect(res.status).toBe(200);
-    expect(res.body.seconds).toBe(120);
-    done();
-  })
+      expect(res.body.seconds).toBe(120);
+      done();
+    });
+
+    test('3 minutes', async done => {
+      const res = await req.get('/time/m2s/3');
+
+      expect(res.body.seconds).toBe(180);
+      done();
+    });
+
+    test('5 minutes', async done => {
+      const res = await req.get('/time/m2s/5');
+
+      expect(res.body.seconds).toBe(300);
+      done();
+    });
+  });
 });
