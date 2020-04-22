@@ -4,22 +4,26 @@
   "description": "Typical code challenges we find in all technical interview, ranging from very easy to that what-the-heck moment we all hate when it happens in the middle of an interview. .",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "./src/server.js",
+  "main": "./src/start.js",
   "scripts": {
-    "start": "node ./src/server",
+    "start": "node ./src/start",
+    "start:dev": "nodemon",
     "test": "jest"
   },
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/src/"
     ]
   },
   "devDependencies": {
     "jest": "^25.3.0",
+    "nodemon": "^2.0.3",
     "supertest": "^4.0.2"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0"
   }
 }

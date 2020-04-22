@@ -1,7 +1,14 @@
 const express = require('express');
-const controller = require('./time.controller');
 const router = express.Router();
 
-router.get('/m2s/:minutes', controller.minutesToSeconds);
+const common = require('../common');
+const controller = require('./time.controller');
+const validator = require('./time.validator');
+
+router.get(
+  '/m2s/:minutes',
+  validator.minutesToSeconds(),
+  common.checkValidation,
+  controller.minutesToSeconds);
 
 module.exports = router;
