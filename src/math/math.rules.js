@@ -1,4 +1,4 @@
-const { param } = require('express-validator')
+const { param } = require('express-validator');
 
 module.exports = {
   getNextNumber: () => {

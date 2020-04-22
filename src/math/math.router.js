@@ -1,20 +1,10 @@
 const express = require('express');
-const router = express.Router();
-
 const common = require('../common');
 const controller = require('./math.controller');
-const validator = require('./math.validator');
+const rules = require('./math.rules');
 
-router.get(
-  '/next/:num',
-  validator.getNextNumber(),
-  common.checkValidation,
-  controller.getNextNumber);
-
-router.get(
-  '/sum2nums/:num1/:num2',
-  validator.sumTwoNumbers(),
-  common.checkValidation,
-  controller.sumTwoNumbers);
+const router = express.Router();
+router.get('/next/:num', rules.getNextNumber(), common.checkValidation, controller.getNextNumber);
+router.get('/sum2nums/:num1/:num2', rules.sumTwoNumbers(), common.checkValidation, controller.sumTwoNumbers);
 
 module.exports = router;

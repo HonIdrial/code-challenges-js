@@ -1,14 +1,9 @@
 const express = require('express');
-const router = express.Router();
-
 const common = require('../common');
 const controller = require('./time.controller');
-const validator = require('./time.validator');
+const rules = require('./time.rules');
 
-router.get(
-  '/m2s/:minutes',
-  validator.minutesToSeconds(),
-  common.checkValidation,
-  controller.minutesToSeconds);
+const router = express.Router();
+router.get('/m2s/:minutes', rules.minutesToSeconds(), common.checkValidation, controller.minutesToSeconds);
 
 module.exports = router;
