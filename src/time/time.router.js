@@ -7,7 +7,8 @@ const router = express.Router();
 
 /**
  * Convert Minutes into Seconds
- * @param {number} minutes the number of minutes to convert into seconds
+ * @param {number} minutes - Number of minutes to convert into seconds
+ * @returns {number} Number of seconds in minutes
  */
 router.get('/m2s/:minutes', rules.minutesToSeconds(), common.checkValidation, controller.minutesToSeconds);
 
