@@ -10,6 +10,10 @@ const router = express.Router();
  * @param {number} minutes - Number of minutes to convert into seconds
  * @returns {number} Number of seconds in minutes
  */
-router.get('/m2s/:minutes', rules.minutesToSeconds(), common.checkValidation, controller.minutesToSeconds);
+router.get(
+  '/m2s/:minutes',
+  rules.minutesToSeconds(),
+  common.checkValidation,
+  controller.minutesToSeconds);
 
 module.exports = router;
