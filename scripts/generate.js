@@ -1,4 +1,4 @@
-const generators = ['controller'];
+const generators = ['c', 'controller'];
 const generator = process.argv[2];
 
 if (!generator || !generators.includes(generator)) {
@@ -13,6 +13,8 @@ Please choose from the generators below:
 }
 
 switch (generator) {
+  case ('c'):
   case ('controller'):
     require('./generateController');
+    break;
 };
