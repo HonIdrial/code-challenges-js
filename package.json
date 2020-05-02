@@ -6,6 +6,7 @@
   "license": "MIT",
   "main": "./src/start.js",
   "scripts": {
+    "generate": "node ./scripts/generate",
     "start": "node ./src/start",
     "start:dev": "nodemon -e js,json,yaml",
     "test": "jest"
