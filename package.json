@@ -1,20 +1,19 @@
 {
   "author": "Daniel Arriero",
   "name": "code-challenges",
-  "description": "Typical code challenges we find in all technical interview, ranging from very easy to that what-the-heck moment we all hate when it happens in the middle of an interview. .",
+  "description": "Typical code challenges we find in all technical interviews, ranging from very easy to that what-the-heck moment we all hate when it happens in the middle of an interview. .",
   "version": "1.0.0",
   "license": "MIT",
   "main": "./src/start.js",
   "scripts": {
     "start": "node ./src/start",
-    "start:dev": "nodemon",
+    "start:dev": "nodemon -e js,json,yaml",
     "test": "jest"
   },
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
-      "/node_modules/",
-      "/src/"
+      "/node_modules/"
     ]
   },
   "devDependencies": {
