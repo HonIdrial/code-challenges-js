@@ -6,7 +6,7 @@ const rules = require('./crypto.rules');
 const router = express.Router();
 
 /**
- * Creates a hash from the input Convert Minutes into Seconds in 3 steps:
+ * Creates a hash from the input in 3 steps:
  *  - Creates a sha256 hash from an array of strings.
  *  - Sorts the hash, alphas first digits second.
  *  - Returns a new sha256 hash from the sorted string.
