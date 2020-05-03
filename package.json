@@ -6,15 +6,18 @@
   "license": "MIT",
   "main": "./src/start.js",
   "scripts": {
+    "g": "node ./scripts/generate",
     "generate": "node ./scripts/generate",
     "start": "node ./src/start",
     "start:dev": "nodemon -e js,json,yaml",
-    "test": "jest"
+    "test": "jest",
+    "test:cov": "jest --collect-coverage"
   },
   "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePatterns": [
-      "/node_modules/"
+      "/node_modules/",
+      "/src/core/"
     ]
   },
   "devDependencies": {

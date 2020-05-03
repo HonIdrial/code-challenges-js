@@ -1,5 +1,5 @@
 const express = require('express');
-const common = require('../common');
+const common = require('../core/common');
 const controller = require('./time.controller');
 const rules = require('./time.rules');
 
